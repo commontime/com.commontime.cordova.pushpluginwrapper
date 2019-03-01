@@ -5,23 +5,11 @@ var events = {}
 
 exports.registerForPush = function(callback, errorCallback, options) {
 
-    const ops = {
-        android: {
-        },
-        ios: {
-            alert: "true",
-            badge: "true",
-            sound: "true"
-        }
-    };
-
-    registration = PushNotification.init(ops);
-
-    registration.on('registration', function(token) {
+    FCMPlugin.getToken(function(token){
         callback(token);
     });
 
-    registration.on('notification', function(data) {
+    FCMPlugin.onNotification(function(data){
         const list = events['pushReceived'];
         if(list && list.length > 0) {
             for(const i = 0; i < list.length; i++) {
@@ -29,7 +17,7 @@ exports.registerForPush = function(callback, errorCallback, options) {
             }
         }
     });
-};
+};  
                
 exports.unregisterForPush = function(callback, errorCallback, options) {
 };
