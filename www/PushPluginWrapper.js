@@ -1,6 +1,7 @@
 var exec = require('cordova/exec');
 
 var registration = undefined;
+var events = {}
 
 exports.registerForPush = function(callback, errorCallback, options) {
 
@@ -19,18 +20,23 @@ exports.registerForPush = function(callback, errorCallback, options) {
     registration.on('registration', function(token) {
         callback(token);
     });
+
+    registration.on('notification', function(data) {
+        const list = events['pushReceived'];
+        if(list && list.length > 0) {
+            for(const i = 0; i < list.length; i++) {
+                list[i].callback(data);
+            }
+        }
+    });
 };
                
 exports.unregisterForPush = function(callback, errorCallback, options) {
-    this.core.unregisterForPush(callback, errorCallback, options);
 };
 
 exports.on = function (event, callback, scope) {
-    if(event === 'pushReceived') {
-        registration.on('notification', function(data) {
-            callback(data);
-        });
-    }
+    if(!events[event]) events[event] = [];
+    events[event].push({"callback": callback});
 };
 
 exports.un = function (event, callback) {
