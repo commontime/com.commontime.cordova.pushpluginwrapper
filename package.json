@@ -1,0 +1,32 @@
+{
+    "name": "com.commontime.cordova.pushpluginwrapper",
+    "description": "Register and receive push notifications (wrapper)",
+    "version": "0.0.1",
+    "homepage": "http://github.com/commontime/com.commontime.cordova.pushpluginwrapper#readme",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/commontime/com.commontime.cordova.pushpluginwrapper.git"
+    },
+    "bugs": {
+      "url": "https://github.com/commontime/com.commontime.cordova.pushpluginwrapper/issues"
+    },
+    "cordova": {
+      "id": "com.commontime.cordova.pushpluginwrapper",
+      "platforms": [
+        "ios",
+        "android"
+      ]
+    },
+    "keywords": [
+      "ecosystem:cordova",
+      "ecosystem:phonegap",
+      "cordova-ios",
+      "cordova-android",
+      "cordova-windows8",
+      "cordova-windows",
+      "cordova-wp8",
+      "cordova-browser"
+    ],
+    "dependencies": {
+    }
+  }
