@@ -18,7 +18,7 @@ exports.registerForPush = function(callback, errorCallback, options) {
     registration = PushNotification.init(ops);
 
     registration.on('registration', function(token) {
-        callback(token);
+        callback(token.registrationId);
     });
 
     registration.on('notification', function(data) {
