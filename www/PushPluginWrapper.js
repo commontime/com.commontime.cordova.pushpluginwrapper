@@ -24,7 +24,7 @@ exports.registerForPush = function(callback, errorCallback, options) {
     registration.on('notification', function(data) {
         const list = events['pushReceived'];
         if(list && list.length > 0) {
-            for(const i = 0; i < list.length; i++) {
+            for(var i = 0; i < list.length; i++) {
                 list[i].callback(data);
             }
         }
