@@ -3,6 +3,7 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>PushPluginWrapper</name>
+    <dependency id="phonegap-push-plugin" version="^2.2.3" />
     <js-module name="PushPluginWrapper" src="www/PushPluginWrapper.js">
         <clobbers target="cordova.plugins.notification" />
     </js-module>
