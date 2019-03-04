@@ -6,13 +6,13 @@
     <js-module name="PushPluginWrapper" src="www/PushPluginWrapper.js">
         <clobbers target="cordova.plugins.notification" />
     </js-module>
-    <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="PushPluginWrapper">
-                <param name="android-package" value="com.commontime.cordova.pushpluginwrapper.PushPluginWrapper" />
-            </feature>
-        </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+<!--     <platform name="android"> -->
+<!--         <config-file parent="/*" target="res/xml/config.xml"> -->
+<!--             <feature name="PushPluginWrapper"> -->
+<!--                 <param name="android-package" value="com.commontime.cordova.pushpluginwrapper.PushPluginWrapper" /> -->
+<!--             </feature> -->
+<!--         </config-file> -->
+<!--         <config-file parent="/*" target="AndroidManifest.xml"></config-file> -->
         <source-file src="src/android/PushPluginWrapper.java" target-dir="src/com/commontime/cordova/pushpluginwrapper/PushPluginWrapper" />
     </platform>
 </plugin>
