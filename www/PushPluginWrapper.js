@@ -32,6 +32,11 @@ exports.registerForPush = function(callback, errorCallback, options) {
 };
                
 exports.unregisterForPush = function(callback, errorCallback, options) {
+    registration.unregister(function() {
+        callback();
+    }, function() {  
+        errorCallback();
+    });
 };
 
 exports.on = function (event, callback, scope) {
