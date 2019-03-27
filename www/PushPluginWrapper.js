@@ -26,6 +26,7 @@ exports.registerForPush = function(callback, errorCallback, options) {
         if(list && list.length > 0) {
             for(var i = 0; i < list.length; i++) {
                 list[i].callback(data);
+                window.lastPush = data;
             }
         }
     });
