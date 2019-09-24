@@ -1,7 +1,7 @@
 {
     "name": "com.commontime.cordova.pushpluginwrapper",
     "description": "Register and receive push notifications (wrapper)",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "homepage": "http://github.com/commontime/com.commontime.cordova.pushpluginwrapper#readme",
     "repository": {
       "type": "git",
