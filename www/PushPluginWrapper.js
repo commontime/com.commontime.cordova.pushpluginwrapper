@@ -7,6 +7,7 @@ exports.registerForPush = function(callback, errorCallback, options) {
 
     const ops = {
         android: {
+            icon: "notification_icon"
         },
         ios: {
             alert: "true",
