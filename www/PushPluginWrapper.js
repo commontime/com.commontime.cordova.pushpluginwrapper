@@ -30,6 +30,8 @@ exports.registerForPush = function(callback, errorCallback, options) {
             }
         }
     });
+    
+    window.push = pushRegistration;
 };
                
 exports.unregisterForPush = function(callback, errorCallback, options) {
