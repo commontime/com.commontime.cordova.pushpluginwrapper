@@ -31,7 +31,7 @@ exports.registerForPush = function(callback, errorCallback, options) {
         }
     });
     
-    window.push = pushRegistration;
+    window.pushRegistration = registration;
 };
                
 exports.unregisterForPush = function(callback, errorCallback, options) {
