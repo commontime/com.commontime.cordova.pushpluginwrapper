@@ -12,7 +12,8 @@ exports.registerForPush = function(callback, errorCallback, options) {
         ios: {
             alert: "true",
             badge: "true",
-            sound: "true"
+            sound: "true",
+            clearBadge: "true"
         }
     };
 
